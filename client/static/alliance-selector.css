@@ -1,0 +1,99 @@
+#alliance-selector-scroller {
+    width: 99.5%;
+    height: 70vh;
+    overflow: scroll;
+}
+
+#alliance-display {
+    width: 97%;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8vh;
+}
+
+.alliance-selector-header {
+    font-size: 2.5vh !important;
+    text-align: center;
+    font-weight: normal;
+}
+
+#alliance-display-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    table-layout: fixed;
+    background-color: #FFF;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 1.8vh;
+}
+
+#alliance-display-table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: normal;
+    word-wrap:break-word;
+    text-align: center;
+}
+
+#sort-by {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#sort-by label {
+    font-size: 2.2vh;
+    font-weight: 300;
+}
+
+#sorting-options {
+    background-color: #FFF;
+    text-align: center;
+    font-size: 2vh;
+    width: 30vw;
+    height: 3.4vh;
+    border: 2px solid #5B6671;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out
+}
+
+#sorting-options:focus {
+    border-color: #2d3236;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.35);
+}
+
+
+#sorting-options option {
+    font-size: 1.8vh;
+}
+
+#available-teams-table {
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    width: 97%;
+    table-layout: fixed;
+    background-color: #FFF;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 1.8vh;
+}
+
+#available-teams-table td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: normal;
+    word-wrap:break-word;
+    text-align: center;
+}

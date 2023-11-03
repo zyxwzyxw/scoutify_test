@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script type="module" src="../static/scripts/bottomBar.js" defer></script>
+    <div id="page-holder">
+        <div id="alliance-selector-scroller">
+            <div id="alliance-display">
+                <p class="alliance-selector-header">
+                    Current Alliance Picks
+                </p>
+                <div class="strategy-divider">ㅤ</div>
+                <table id="alliance-display-table">
+                    <thead>
+                        <tr>
+                            <th>Alliance</th>
+                            <th>Captain</th>
+                            <th>1st Pick</th>
+                            <th>2nd Pick</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < 8 ; i++) { %>
+                            <tr>
+                                <td>
+                                    <%=i+1%>
+                                </td>
+                                <% for(let j = 0; j < 3 ; j++) { %>
+                                    <td>
+                                        <% let selectedTeam = "" 
+                                        let row = data.find((e) => e.alliance_number == i)
+                                        if(row != null) {
+                                            if(j == 0) {
+                                                selectedTeam = row.alliance_captain
+                                            } else if(j == 1) {
+                                                selectedTeam = row.alliance_first
+                                            } else if(j == 2) {
+                                                selectedTeam = row.alliance_second
+                                            } 
+                                        } %>
+                                        <%if(selectedTeam != null && selectedTeam != "") { %>
+                                            <%=selectedTeam.toString()%>
+                                        <%} %>
+                                    </td>
+                                <% } %>
+                            <tr>
+                        <% } %>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <p class="alliance-selector-header">
+                Available Teams
+            </p>
+            <div class="strategy-divider">ㅤ</div>
+
+            <div class="small-input-container" id="sort-by">
+                <label for="sorting-options"> <b>Sort By: </b> </label>
+                <select name="sorting-options" id="sorting-options">
+                    <option value="best">Overall Best</option>
+                    <option value="scoring">Game Score</option>
+                    <option value="chargeStation">Charge Station Score</option>
+                </select>
+            </div>
+
+            <table id="available-teams-table">
+                <colgroup>
+                    <col span="1" style="width: 14%">
+                    <col span="1" style="width: 14%">
+                    <col span="1" style="width: 15%">
+                    <col span="1" style="width: 14%">
+                </colgroup>
+                <thead>
+                    <th>Team</th>
+                    <th>Api Rank</th>
+                    <th>Game Score</th>
+                    <th>Links</th>
+                    <th>Auton Chg Station</th>
+                    <th>Endgame Chg Station</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
