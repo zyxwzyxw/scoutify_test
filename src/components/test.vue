@@ -43,6 +43,9 @@ const autonscoring = {
     time: [5],
     points: [2],
     limit: [999999],
+
+    // For parking, use [seconds, points] arrays
+    // l=Leave [0, 0] option open for not parking
     parking: [
         [0, 0],
         [3, 3],
@@ -62,6 +65,8 @@ const endgamescoring = {
 };
 
 // Reactivity enabled variables
+// Variables from here on won't be changed on year by year basis
+// Auton might be (15 + 3) seconds long
 let auton = ref(15);
 let teleop = ref(105);
 let endgame = ref(30);
