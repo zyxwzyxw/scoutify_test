@@ -2,10 +2,25 @@
   <div id="app">
     <h1>Test Index Page</h1>
     <p>Hello world!</p>
+
+    <!-- Import the components -->
+    <Test />
   </div>
 </template>
 
+<script>
+import Test from '../components/test.vue';
+
+export default {
+  components: {
+    Test // Register 'Test' component
+  }
+};
+</script>
+
 <style scoped>
+@import '../assets/css/scrollbar.css';
+
 #app {
   position: fixed;
   width: 100%;
@@ -14,10 +29,10 @@
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
 </style>
