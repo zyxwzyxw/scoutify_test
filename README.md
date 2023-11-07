@@ -65,15 +65,15 @@ When terminal shows the local preview link, that means success!
 
   <b>Make sure after you create the new components, import those into the index.vue!!!</b>
 
-  #### Example import code
+  #### Example import code:
 
 ```vue
-    ...
     <template>
       ...
       <div>
       <!-- Import the components -->
-        <Test />
+      <!-- Same as your import name -->
+        <YourComponentsName />
       </div>
       ...
     </template>
@@ -89,4 +89,5 @@ When terminal shows the local preview link, that means success!
     </script>
 
 ```
+----
 </details>
